@@ -74,6 +74,12 @@
                                              Veri Tabanı
                                              Mobil Programlama
     */
+
+
+
+
+
+
     $ogrenciDetaylari = array(
         "ogr1" => array(
             "id"        => 1,
@@ -254,10 +260,78 @@
     2-Rasgele 0-100 arasında üretilen değerin 50'den küçük olduğu durumlarda kaldınız, büyükse geçtiniz yazdırınız.
     3-Doğum yılına göre 18 yaşından büyük olanların ehliyet alabileceğini kontrol eden if bloğunu yazınız. */
 
-    
+    echo " <hr> <h4>PHP Ödevler</h4>";
+echo "-Rasgele 0-100 arasında üretilen değerin 50'den küçük olduğu durumlarda kaldınız, büyükse geçtiniz yazdırınız.";
+echo "<br>";
+$not = rand(10,100);
+if ($not >=50) {
+    echo "Geçtiniz-Notunuz:$not";
+}
+else {
+    echo "Kaldınız-Notunuz:$not";
+}
+echo "<br> <br>";
+
+
+echo "-Rasgele 0-100 arasında üretilen değerin tek veya çift olduğunu ekrana yazdırınız."; 
+$sayı = rand(0,100);
+    echo "<br> $sayı sayısı: " . (fmod($sayı, 2) == 0 ? "Çifttir" : "Tektir");
+    echo "<br> <br>";
+
+
+echo "-Doğum yılına göre 18 yaşından büyük olanların ehliyet alabileceğini kontrol eden if bloğunu yazınız.";
+echo "<br>";
+$yaş = rand(10,35);
+if ($yaş>=18){
+    echo "ehliyet alabilirsiniz:$yaş";
+}
+else{
+    echo "ehliyet alamazsınız:$yaş";
+}
+echo "<br> <br>";
+
+
+echo " Aşağıdaki dizinin her elamnı bir öğrenci detayına karşılık gelmektedir.
+    Bu öğrencilere ait detayları aşağıdaki şekilde satır satır bir tablo oluşturup içerisine yazdırınız.";
+   
+
+$id="1";
+$adı="havva";
+$soyadı="yıldız";
+$bölüm="bilgisayar";
+$dersler="web programlama  veri tabanı mobil programlama";
+$sınıf="2";
+
 
 
     ?>
+
+<form action="">
+    <label for="universite">id: </label>
+    <input type="text" name=" " value="<?php echo $id; ?>" id="universite" disabled><br>
+
+    <label for="universite">adı: </label>
+    <input type="text" name=" " value="<?php echo $adı; ?>" id="universite" disabled><br>
+
+    <label for="universite">soyadı: </label>
+    <input type="text" name=" " value="<?php echo $soyadı; ?>" id="universite" disabled><br>
+
+    <label for="universite">bölüm: </label>
+    <input type="text" name=" " value="<?php echo $bölüm; ?>" id="universite" disabled><br>
+
+    <label for="universite">dersler: </label>
+    <input type="text" name=" " value="<?php echo $dersler; ?>" id="universite" disabled><br>
+
+    <label for="universite">sınıf: </label>
+    <input type="text" name=" " value="<?php echo $sınıf; ?>" id="universite" disabled><br>
+
+
+
+
+
+
+
+
 
 
 </body>
